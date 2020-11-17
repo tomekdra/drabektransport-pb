@@ -1,0 +1,144 @@
+@import "src/scss/config/variables";
+@import "src/scss/config/mixins";
+
+// page header
+.contactus-header-image {
+  @include header;
+  background: url("../../images/smartphone-notebook.jpg") no-repeat 50% 70% /
+    cover;
+}
+
+.contactus-header-title {
+  @include header-title;
+  display: none;
+}
+
+// form
+.contactus-form {
+  width: 95%;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+  margin: 30px auto;
+
+  p {
+    font-weight: 300;
+    margin: 5px 0;
+  }
+
+  form {
+    border: 1px solid rgba($color-second, 0.5);
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      border: none;
+      border-bottom: 2px solid $color-contrast;
+      padding: 5px;
+      margin-bottom: 15px;
+    }
+
+    textarea {
+      border: none;
+      border-bottom: 2px solid $color-contrast;
+      padding: 5px;
+      margin-bottom: 15px;
+      min-height: 150px;
+    }
+
+    button {
+      background: $color-second;
+      border: none;
+      border-bottom: 5px solid darken($color-second, 10%);
+      border-radius: 5px;
+      height: 45px;
+      width: 60%;
+      margin: 0 auto;
+      color: $color-font-light;
+      transition: box-shadow 100ms ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        color: darken($color-font-light, 20%);
+      }
+
+      &:focus {
+        border: 1px solid $color-main;
+      }
+    }
+
+    .error {
+      color: $color-contrast;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loading-spinner {
+      display: inline-block;
+      height: 1.5rem;
+      width: 1.5rem;
+      border: 3px solid $color-contrast;
+      border-radius: 50%;
+      border-right: 2px solid transparent;
+      animation: spin 1s infinite;
+    }
+
+    .sent-success {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(#32a852, 0.2);
+      color: $color-recycle;
+      border: 1px solid $color-recycle;
+      margin-bottom: 10px;
+
+      strong {
+        font-weight: bold;
+      }
+    }
+    .sent-error {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba($color-contrast, 0.2);
+      color: $color-contrast;
+      border: 1px solid $color-contrast;
+      margin-bottom: 10px;
+
+      strong {
+        font-weight: bold;
+      }
+    }
+
+    .contactus-agreements {
+      margin: 20px 0;
+      font-size: 14px;
+    }
+  }
+}
+
+.contactus-form-title {
+  @include darkHeader;
+}
+
+@media screen and (min-width: 800px) {
+  .contactus-header-title {
+    display: flex;
+  }
+  .contactus-form {
+    width: 45%;
+  }
+}

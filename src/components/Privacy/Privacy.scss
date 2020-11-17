@@ -1,0 +1,42 @@
+@import "src/scss/config/variables";
+@import "src/scss/config/mixins";
+
+.privacy-container {
+  width: 95%;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, .25);
+  margin: 30px auto;
+
+
+  ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    padding: 10px;
+    border: 1px solid rgba($color-second, 0.5);
+    li {
+      line-height: 1.5;
+      font-weight: 600;
+    }
+    span {
+      font-weight: normal;
+    }
+  }
+}
+
+.privacy-header-image {
+  @include header;
+  background: url("../../images/sign-pen.jpg") no-repeat center/cover;
+}
+
+.privacy-header-title {
+  @include header-title;
+}
+
+.privacy-title {
+@include darkHeader;
+}
+
+@media screen and (min-width: 800px) {
+  .privacy-container {
+    max-width: 1200px;
+  }
+}

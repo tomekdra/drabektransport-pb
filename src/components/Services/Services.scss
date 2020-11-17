@@ -1,0 +1,93 @@
+@import "src/scss/config/variables";
+@import "src/scss/config/mixins";
+
+.services-header-image {
+  @include header;
+  background: url("../../images/marketing-strategy.jpg") no-repeat 50% 80%/cover;
+}
+
+.services-header-title {
+  @include header-title;
+}
+
+.services-container {
+  margin-bottom: 50px;
+
+
+  i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    color: $color-main;
+    text-shadow: $shadow-icons;
+  }
+
+}
+
+.services-card {
+  max-width: 95%;
+  text-align: center;
+  margin: 20px auto;
+
+  i {
+    font-size: 6rem;
+  }
+
+  .services-card-title {
+    margin: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  .services-card-content {
+    font-size: 1.2rem;
+  }
+
+  .icon-recycle {
+    color: $color-recycle;
+  }
+
+  .icon-truck {
+    color: $color-contrast;
+  }
+
+  .icon-map-o {
+    color: $color-second;
+  }
+}
+
+.services-card:first-child {
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 800px) {
+
+  .services-container {
+
+    .services-card {
+      max-width: 250px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-around;
+      margin: 0 auto;
+
+    }
+
+    i {
+      grid-column: span 4;
+    }
+
+    p {
+      grid-column: 5 / span 13;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .services-card:first-child {
+    margin-top: 20px;
+  }
+}

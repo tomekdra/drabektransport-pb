@@ -1,0 +1,24 @@
+@mixin header {
+  height: $navigation-height + 100px;
+  width: 100%;
+}
+
+@mixin header-title {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, $color-main, $color-second);
+  color: $color-font-light;
+  margin-bottom: 50px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, .25);
+}
+
+@mixin darkHeader {
+  background: $color-main;
+  color: $color-font-light;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}

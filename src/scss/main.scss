@@ -1,0 +1,17 @@
+@import "config/reset";
+@import "config/variables";
+@import "config/typography";
+@import "config/mixins";
+@import "elements";
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.small-container {
+  width: 95%;
+}
+
+
+@import "config/mediaQueries";

@@ -1,0 +1,18 @@
+// font Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+// font Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+// *****
+
+html, input, textarea {
+  font-family: Montserrat, Tahoma, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.5rem;
+}

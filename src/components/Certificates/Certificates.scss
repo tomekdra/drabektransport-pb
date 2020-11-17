@@ -1,0 +1,84 @@
+@import "src/scss/config/variables";
+@import "src/scss/config/mixins";
+
+.certificates-header-image {
+  @include header;
+  background: url("../../images/sign-pen.jpg") no-repeat center/cover;
+}
+
+.certificates-header-title {
+  @include header-title;
+}
+
+.certificates-container {
+  margin-bottom: 50px;
+
+
+  i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    color: $color-main;
+    text-shadow: $shadow-icons;
+  }
+
+}
+
+
+.certificates-image {
+  border: 7px solid rgba($color-main, .8);
+  border-radius: 5px;
+  width: 90%;
+  max-width: 250px;
+  height: 150px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11rem;
+}
+
+.certificates-content {
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.adr {
+  background: $color-contrast;
+}
+
+.albo {
+  font-size: 4rem;
+}
+.certificates-card {
+  max-width: 320px;
+  margin: 25px auto;
+}
+
+
+@media screen and (min-width: 800px) {
+
+  .certificates-container {
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+
+    }
+
+    i {
+      grid-column: span 4;
+    }
+
+    p {
+      grid-column: 5 / span 13;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+}

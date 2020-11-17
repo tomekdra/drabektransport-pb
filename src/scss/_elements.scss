@@ -1,0 +1,15 @@
+.bar {
+  width: 90%;
+  height: 10px;
+  background: linear-gradient(-45deg, $color-font-light, $color-second);
+  margin: 75px auto;
+  transform: skew(-45deg);
+  display: block;
+}
+
+.p-header {
+  margin: 20px auto;
+  width: 95%;
+  font-size: 1.5rem;
+  font-weight: 300;
+}

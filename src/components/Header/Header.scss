@@ -1,0 +1,18 @@
+@import "../../scss/config/variables";
+
+.swiper-container {
+display: none;
+}
+
+
+.slide {
+  width: 100%;
+  background: no-repeat center/cover;
+}
+
+@media screen and (min-width: 800px) {
+  .swiper-container {
+    display: block;
+    height: 100vh;
+  }
+}

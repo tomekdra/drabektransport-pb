@@ -1,0 +1,12 @@
+@media screen and (min-width: $desktop) {
+  .container {
+    width: $desktop;
+  }
+  .small-container {
+    width: 800px;
+  }
+
+  .bar {
+    width: 60%;
+  }
+}
